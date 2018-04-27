@@ -1,0 +1,11 @@
+.idea/*
+*.log
+node_modules
+coverage
+.nyc_output
+coverage.lcov
+mochawesome-report/*
+dist/js/*
+dist-/*
+dist/ts/*
+snippet.js
