@@ -2,8 +2,7 @@ import 'mocha';
 import { expect } from 'chai';
 import { knapSackGreedy } from '../../../../src/ts/index';
 
-describe('Min Coin Change Greedy', () => {
-  const SIZE = 100;
+describe('KnapSack Greedy', () => {
 
   it('works with greedy approach', () => {
     const values = [3, 4, 5];
