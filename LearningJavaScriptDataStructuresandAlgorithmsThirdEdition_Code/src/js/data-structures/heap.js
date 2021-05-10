@@ -88,7 +88,7 @@ export class MinHeap {
       this.heap = array;
     }
     const maxIndex = Math.floor(this.size() / 2) - 1;
-    for (let i = 0; i <= maxIndex; i++) {
+    for (let i = maxIndex; i >= 0; i--) {
       this.siftDown(i);
     }
     return this.heap;
