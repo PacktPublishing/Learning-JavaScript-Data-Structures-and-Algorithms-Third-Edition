@@ -2,7 +2,7 @@ import Queue from '../data-structures/queue';
 
 export function hotPotato(elementsList, num) {
   const queue = new Queue();
-  const elimitatedList = [];
+  const eliminatedList = [];
 
   for (let i = 0; i < elementsList.length; i++) {
     queue.enqueue(elementsList[i]);
@@ -12,11 +12,11 @@ export function hotPotato(elementsList, num) {
     for (let i = 0; i < num; i++) {
       queue.enqueue(queue.dequeue());
     }
-    elimitatedList.push(queue.dequeue());
+    eliminatedList.push(queue.dequeue());
   }
 
   return {
-    eliminated: elimitatedList,
+    eliminated: eliminatedList,
     winner: queue.dequeue()
   };
 }
