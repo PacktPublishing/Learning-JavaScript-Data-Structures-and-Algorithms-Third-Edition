@@ -138,8 +138,16 @@ export default class AVLTree extends BinarySearchTree {
         return this.rotationLL(node);
       }
       // Left right case
+      // eg:
+      //     e                              e                               e
+      //    / \      rotationRR(node.left) / \        roationLL(node)      / \ 
+      //   c  ...   -> rotationRR(a) ->   c   ...   -> roationLL(c) ->    b   ...
+      //  /                              /                               / \       
+      // a                              b                               a   c
+      //  \                            / 
+      //   b                          a
       if (this.getBalanceFactor(node.left) === BalanceFactor.SLIGHTLY_UNBALANCED_RIGHT) {
-        return this.rotationLR(node.left);
+        return this.rotationLR(node);
       }
     }
     if (balanceFactor === BalanceFactor.UNBALANCED_RIGHT) {
@@ -151,8 +159,16 @@ export default class AVLTree extends BinarySearchTree {
         return this.rotationRR(node);
       }
       // Right left case
+      // eg:
+      //     a                              a                           a
+      //    / \     rotationLL(node.right) / \       roationRR(node)   / \ 
+      // ...   b    -> rotationLL(d) ->  ...  b   -> roationRR(b) -> ...  c
+      //        \                              \                         / \       
+      //        d                               c                       b   d
+      //       /                                 \
+      //      c                                   d
       if (this.getBalanceFactor(node.right) === BalanceFactor.SLIGHTLY_UNBALANCED_LEFT) {
-        return this.rotationRL(node.right);
+        return this.rotationRL(node);
       }
     }
     return node;
