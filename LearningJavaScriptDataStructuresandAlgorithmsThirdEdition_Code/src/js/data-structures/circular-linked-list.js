@@ -1,6 +1,6 @@
-import { defaultEquals } from '../util';
-import LinkedList from './linked-list';
-import { Node } from './models/linked-list-models';
+import { defaultEquals } from "../util";
+import LinkedList from "./linked-list";
+import { Node } from "./models/linked-list-models";
 
 export default class CircularLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals) {
@@ -30,7 +30,7 @@ export default class CircularLinkedList extends LinkedList {
           node.next = this.head;
         } else {
           node.next = current;
-          current = this.getElementAt(this.size());
+          current = this.getElementAt(this.size() - 1);
           // update last element
           this.head = node;
           current.next = this.head;
