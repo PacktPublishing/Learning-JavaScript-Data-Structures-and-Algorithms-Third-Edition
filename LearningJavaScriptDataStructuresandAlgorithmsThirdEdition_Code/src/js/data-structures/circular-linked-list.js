@@ -1,6 +1,6 @@
-import { defaultEquals } from '../util';
-import LinkedList from './linked-list';
-import { Node } from './models/linked-list-models';
+import { defaultEquals } from "../util";
+import LinkedList from "./linked-list";
+import { Node } from "./models/linked-list-models";
 
 export default class CircularLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals) {

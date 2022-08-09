@@ -1,6 +1,6 @@
-import { defaultEquals, IEqualsFunction } from '../util';
-import LinkedList from './linked-list';
-import { Node } from './models/linked-list-models';
+import { defaultEquals, IEqualsFunction } from "../util";
+import LinkedList from "./linked-list";
+import { Node } from "./models/linked-list-models";
 
 export default class CircularLinkedList<T> extends LinkedList<T> {
   constructor(protected equalsFn: IEqualsFunction<T> = defaultEquals) {
